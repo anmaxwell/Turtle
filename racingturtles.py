@@ -20,7 +20,7 @@ def racing():
 	a = andy.pos()
 	l = lance.pos()
 
-	while a[0] <0 or l[0] <0:
+	while a[0] <50 or l[0] <50:
 		andymove = random.randrange(1,10)
 		lancemove = random.randrange(1,10)
     
@@ -31,9 +31,15 @@ def racing():
 		l = lance.pos()
 
 	if a[0] > l[0]:
+		winner = andy
 		andy.write("andy wins   ", align="right")
 	else:
+		winner = lance
 		lance.write("lance wins   ", align="right")
+
+	for spin in range(24):
+		winner.right(90)
+
 
 	track.exitonclick()
 
