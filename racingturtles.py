@@ -31,9 +31,9 @@ def racing():
 		l = lance.pos()
 
 	if a[0] > l[0]:
-		print("andy wins")
+		andy.write("andy wins")
 	else:
-		print("lance wins")
+		lance.write("lance wins")
 
 	track.exitonclick()
 
